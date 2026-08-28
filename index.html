@@ -68,8 +68,10 @@
     background:var(--paper);
     color:var(--ink);
     font-family:"Noto Sans TC",system-ui,-apple-system,"Microsoft JhengHei",sans-serif;
-    line-height:1.7;
+    line-height:1.8;
+    font-size:17.5px;
     -webkit-font-smoothing:antialiased;
+    text-size-adjust:100%;
   }
   .wrap{max-width:720px;margin:0 auto;padding:0 16px 72px}
 
@@ -98,7 +100,7 @@
     text-wrap:balance;letter-spacing:.01em;
   }
   .hero .tag{
-    margin:14px 0 0;font-size:14px;color:rgba(244,240,228,.85);
+    margin:14px 0 0;font-size:16px;color:rgba(244,240,228,.85);
     display:flex;flex-wrap:wrap;gap:6px 14px;
   }
   .hero .tag span{white-space:nowrap}
@@ -112,7 +114,7 @@
   }
   .meta b{display:block;font-family:"Space Mono",monospace;font-size:11px;
     letter-spacing:.15em;color:rgba(244,240,228,.65);font-weight:400;margin-bottom:3px}
-  .meta i{font-style:normal;font-size:14.5px;font-weight:500;line-height:1.4}
+  .meta i{font-style:normal;font-size:16px;font-weight:500;line-height:1.45}
 
   /* ---------- PRINCIPLE NOTE ---------- */
   .principle{
@@ -121,8 +123,8 @@
     box-shadow:var(--shadow);
   }
   .principle h2{margin:0 0 6px;font-size:15px;font-family:"Noto Serif TC",serif;font-weight:700}
-  .principle p{margin:0;font-size:13.5px;color:var(--ink-soft)}
-  .principle .fine{margin-top:9px;font-size:12px;color:var(--ink-faint);line-height:1.6}
+  .principle p{margin:0;font-size:15.5px;color:var(--ink-soft)}
+  .principle .fine{margin-top:9px;font-size:14px;color:var(--ink-faint);line-height:1.65}
 
   /* ---------- STICKY NAV ---------- */
   nav{
@@ -136,7 +138,7 @@
   nav::-webkit-scrollbar{display:none}
   nav a{
     flex:0 0 auto;text-decoration:none;color:var(--ink-soft);
-    font-size:13.5px;font-weight:700;padding:7px 14px;border-radius:999px;
+    font-size:15px;font-weight:700;padding:8px 15px;border-radius:999px;
     border:1px solid var(--line);background:var(--card);white-space:nowrap;
   }
   nav a.solid{background:var(--olive);color:#F4F0E4;border-color:var(--olive)}
@@ -153,10 +155,10 @@
   .day-num small{font-size:10px;letter-spacing:.15em;opacity:.7}
   .day-num b{font-size:24px;margin-top:3px}
   .day-title h2{margin:0;font-family:"Noto Serif TC",serif;font-weight:900;
-    font-size:22px;line-height:1.25;color:var(--ink)}
-  .day-title .date{font-family:"Space Mono",monospace;font-size:12.5px;color:var(--brick);
+    font-size:23px;line-height:1.28;color:var(--ink)}
+  .day-title .date{font-family:"Space Mono",monospace;font-size:14px;color:var(--brick);
     font-weight:700;letter-spacing:.04em}
-  .day-intro{margin:12px 0 20px;font-size:14px;color:var(--ink-soft);
+  .day-intro{margin:12px 0 20px;font-size:15.5px;color:var(--ink-soft);
     background:var(--card-2);border-radius:12px;padding:12px 15px;border:1px dashed var(--line)}
 
   /* ---------- TIMELINE ---------- */
@@ -182,35 +184,44 @@
   .card-body{padding:15px 16px 4px}
   .row{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
   .chip{
-    font-family:"Space Mono",monospace;font-size:11px;font-weight:700;
-    letter-spacing:.05em;padding:3px 8px;border-radius:6px;white-space:nowrap;
+    font-family:"Space Mono",monospace;font-size:13px;font-weight:700;
+    letter-spacing:.04em;padding:4px 9px;border-radius:6px;white-space:nowrap;
     background:var(--gold-soft);color:var(--gold);
   }
   .cat{
-    font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;
+    font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:999px;
     border:1px solid var(--line);color:var(--ink-faint);
   }
   .cat.sight{color:var(--olive);border-color:color-mix(in srgb,var(--olive) 40%,var(--line))}
   .cat.food{color:var(--brick);border-color:color-mix(in srgb,var(--brick) 40%,var(--line))}
   .cat.stay{color:var(--gold);border-color:color-mix(in srgb,var(--gold) 45%,var(--line))}
   .cat.anchor{background:var(--brick);color:#fff;border-color:var(--brick)}
-  .stop h3{margin:9px 0 0;font-family:"Noto Serif TC",serif;font-weight:700;
-    font-size:18.5px;line-height:1.3;color:var(--ink)}
-  .time{font-family:"Space Mono",monospace;font-size:12.5px;color:var(--ink-soft);
-    margin:6px 0 0;font-weight:700}
-  .desc{margin:8px 0 2px;font-size:13.5px;color:var(--ink-soft)}
+  .stop h3{margin:10px 0 0;font-family:"Noto Serif TC",serif;font-weight:700;
+    font-size:21px;line-height:1.32;color:var(--ink)}
+  .time{font-family:"Space Mono",monospace;font-size:14px;color:var(--ink-soft);
+    margin:7px 0 0;font-weight:700}
+  .desc{margin:9px 0 2px;font-size:16px;color:var(--ink-soft);line-height:1.75}
   .note{
-    margin:10px 0 0;font-size:12.5px;color:var(--ink-soft);
-    background:var(--card-2);border-radius:9px;padding:8px 11px;line-height:1.6;
+    margin:11px 0 0;font-size:14.5px;color:var(--ink-soft);
+    background:var(--card-2);border-radius:9px;padding:9px 12px;line-height:1.65;
   }
   .note.rain{border-left:3px solid #4c7c99}
   .note.warn{border-left:3px solid var(--brick)}
 
+  .info{margin:12px 0 2px;display:grid;gap:7px;
+    background:var(--card-2);border-radius:9px;padding:10px 12px}
+  .info>*{font-size:14.5px;line-height:1.55;color:var(--ink-soft);text-decoration:none}
+  .info .addr::before{content:"📍";margin-right:7px}
+  .info .tel{color:var(--brick);font-weight:700}
+  .info .tel::before{content:"📞";margin-right:7px}
+  .info .note{color:var(--ink-faint)}
+  .info .note::before{content:"ℹ️";margin-right:7px}
+
   .navbtn{
     display:flex;align-items:center;justify-content:center;gap:8px;
-    margin:13px 0 0;padding:13px;width:100%;
+    margin:14px 0 0;padding:15px;width:100%;
     background:var(--olive);color:#F4F0E4;text-decoration:none;
-    font-weight:700;font-size:15px;border:none;
+    font-weight:700;font-size:17px;border:none;
     border-top:1px solid color-mix(in srgb,var(--olive) 60%,#000);
   }
   .stop.food .navbtn{background:var(--brick)}
@@ -222,7 +233,7 @@
   .sec{scroll-margin-top:64px;margin-top:40px}
   .sec-h{display:flex;align-items:center;gap:11px;margin-bottom:16px}
   .sec-h .bar{width:5px;height:26px;border-radius:3px;background:var(--brick)}
-  .sec-h h2{margin:0;font-family:"Noto Serif TC",serif;font-weight:900;font-size:21px}
+  .sec-h h2{margin:0;font-family:"Noto Serif TC",serif;font-weight:900;font-size:22.5px}
 
   .top5{display:grid;grid-template-columns:1fr;gap:10px}
   .t5{display:flex;gap:14px;align-items:center;background:var(--card);
@@ -230,44 +241,44 @@
   .t5 .rank{font-family:"Space Mono",monospace;font-weight:700;font-size:13px;
     color:#F4F0E4;background:var(--olive-deep);width:38px;height:38px;border-radius:9px;
     display:flex;align-items:center;justify-content:center;flex:0 0 auto}
-  .t5 b{font-family:"Noto Serif TC",serif;font-size:16px}
-  .t5 span{display:block;font-size:12.5px;color:var(--ink-faint);margin-top:2px}
+  .t5 b{font-family:"Noto Serif TC",serif;font-size:17.5px}
+  .t5 span{display:block;font-size:14px;color:var(--ink-faint);margin-top:3px}
 
   .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
-  table{border-collapse:collapse;width:100%;min-width:520px;background:var(--card);font-size:13px}
-  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  table{border-collapse:collapse;width:100%;min-width:560px;background:var(--card);font-size:15px}
+  th,td{text-align:left;padding:11px 13px;border-bottom:1px solid var(--line);vertical-align:top}
   th{background:var(--card-2);font-weight:700;color:var(--ink);white-space:nowrap;
-    font-family:"Space Mono",monospace;font-size:11.5px;letter-spacing:.05em}
+    font-family:"Space Mono",monospace;font-size:13px;letter-spacing:.04em}
   td b{font-weight:700}
-  .st{font-size:11.5px;font-weight:700;white-space:nowrap}
+  .st{font-size:13px;font-weight:700;white-space:nowrap}
   .st.ok{color:var(--olive)} .st.mid{color:var(--gold)} .st.warn{color:var(--brick)}
 
   .checklist{display:grid;gap:10px}
   .chk{background:var(--card);border:1px solid var(--line);border-radius:12px;
     padding:13px 15px;box-shadow:var(--shadow)}
-  .chk .lbl{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 9px;
+  .chk .lbl{display:inline-block;font-size:13px;font-weight:700;padding:3px 10px;
     border-radius:999px;margin-bottom:7px}
   .lbl.hi{background:color-mix(in srgb,var(--brick) 16%,transparent);color:var(--brick)}
   .lbl.md{background:var(--gold-soft);color:var(--gold)}
   .lbl.lo{background:color-mix(in srgb,var(--olive) 16%,transparent);color:var(--olive)}
-  .chk p{margin:0;font-size:13.5px;color:var(--ink-soft)}
+  .chk p{margin:0;font-size:15.5px;color:var(--ink-soft)}
 
   details{background:var(--card);border:1px solid var(--line);border-radius:12px;
     margin-bottom:10px;overflow:hidden;box-shadow:var(--shadow)}
-  summary{padding:13px 16px;font-weight:700;font-family:"Noto Serif TC",serif;
-    font-size:15.5px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  summary{padding:15px 16px;font-weight:700;font-family:"Noto Serif TC",serif;
+    font-size:17.5px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
   summary::-webkit-details-marker{display:none}
   summary::after{content:"＋";color:var(--brick);font-weight:700}
   details[open] summary::after{content:"－"}
   details[open] summary{border-bottom:1px solid var(--line)}
   .det-body{padding:6px 16px 14px}
-  .fitem{padding:9px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
+  .fitem{padding:10px 0;border-bottom:1px dashed var(--line);font-size:15.5px}
   .fitem:last-child{border-bottom:none}
   .fitem b{color:var(--ink)}
-  .fitem span{color:var(--ink-faint);font-size:12.5px}
+  .fitem span{color:var(--ink-faint);font-size:14px}
 
   footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);
-    font-size:12px;color:var(--ink-faint);line-height:1.7}
+    font-size:13.5px;color:var(--ink-faint);line-height:1.75}
 
   a:focus-visible,summary:focus-visible{outline:2.5px solid var(--brick);outline-offset:2px;border-radius:6px}
 </style>
@@ -324,6 +335,10 @@
           <div class="row"><span class="chip">11:00 取車</span><span class="cat">交通</span></div>
           <h3>✈️ 金門尚義機場 / 租車</h3>
           <p class="desc">辦理租車手續、檢查車況與油量，建議預留 20–30 分鐘再出發。</p>
+          <div class="info">
+            <span class="addr">金門縣金湖鎮尚義機場（金門航空站）</span>
+            <a class="tel" href="tel:+886-82-322381">082-322381</a>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=金門尚義機場" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -334,6 +349,10 @@
           <div class="row"><span class="chip">11:15–12:00</span><span class="cat food">餐飲 · 必吃Top5</span></div>
           <h3>🍜 永春廣東粥</h3>
           <p class="desc">招牌廣東粥、金門小魚丸，蛋奶素可做無肉版。取車後先吃午餐再逛坑道助消化。官方 06:00–13:30 無公休。備案：聯成 / 壽記廣東粥。</p>
+          <div class="info">
+            <span class="addr">金門縣金城鎮莒光路 162 之 2 號</span>
+            <a class="tel" href="tel:+886-82-327292">082-327292</a>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=永春廣東粥+金門" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -344,6 +363,10 @@
           <div class="row"><span class="chip">12:15–13:15</span><span class="cat sight">戰地坑道</span></div>
           <h3>● 翟山坑道</h3>
           <p class="desc">戰地地下坑道，可行船水道，內部潮濕涼爽適合避暑。建議穿防滑鞋，飯後散步剛好助消化。</p>
+          <div class="info">
+            <span class="addr">金門縣金城鎮翟山（古崗湖東南方）</span>
+            <a class="tel" href="tel:+886-82-313241">082-313241</a>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=翟山坑道" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -355,6 +378,10 @@
           <h3>● 水頭聚落 + 得月樓</h3>
           <p class="desc">僑鄉閩南建築 + 洋樓群，得月樓整修完成重新開放，適合慢拍慢逛，建議留足時間。</p>
           <p class="note rain">☔ 雨天可縮短為 40–50 分鐘，走主要動線拍得月樓外觀即可。</p>
+          <div class="info">
+            <span class="addr">金門縣金城鎮前水頭 45 號（得月樓）</span>
+            <a class="tel" href="tel:+886-82-375458">082-375458</a>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=水頭聚落+得月樓" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -365,6 +392,10 @@
           <div class="row"><span class="chip">15:30–16:15</span><span class="cat food">下午茶 · 必吃Top5</span></div>
           <h3>🥟 蚵嗲之家</h3>
           <p class="desc">40 年老店，石蚵蚵嗲、芝麻球。官方約 14:30–19:00（建議不晚於 18:30）。蛋奶素同行者可單吃現炸芝麻球（蚵嗲非素）。</p>
+          <div class="info">
+            <span class="addr">金門縣金城鎮莒光路一段 59 號</span>
+            <a class="tel" href="tel:+886-82-322210">082-322210</a>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=蚵嗲之家+金門" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -375,6 +406,10 @@
           <div class="row"><span class="chip">16:45–17:00</span><span class="cat stay">住宿 Check-in</span></div>
           <h3>🏡 海院子民宿</h3>
           <p class="desc">三晚皆住此處，先放行李、簡單休息整裝，之後不再更換民宿。</p>
+          <div class="info">
+            <span class="addr">金門縣金寧鄉下埔下 355 號</span>
+            <a class="tel" href="tel:+886-82-322308">082-322308</a>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=海院子民宿+金門" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -386,6 +421,10 @@
           <h3>🌅 慈湖海堤 + 慈堤三角堡咖啡屋</h3>
           <p class="desc">看夕陽、賞鳥。咖啡屋每日 15:00–22:00，可歇腳賞景。</p>
           <p class="note rain">☔ 雨天可放棄夕陽，改為單純進咖啡屋室內喝咖啡。</p>
+          <div class="info">
+            <span class="addr">金門縣金寧鄉慈湖路三段 200 號</span>
+            <a class="tel" href="tel:+886-928-174426">0928-174426</a>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=慈堤三角堡咖啡屋+金門" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -396,6 +435,10 @@
           <div class="row"><span class="chip">19:30 集合19:15</span><span class="cat anchor">🏮 時間錨點</span></div>
           <h3>總兵署夜間導覽</h3>
           <p class="desc">清代官署古蹟（清金門鎮總兵署），以既有 19:30 場次為時間錨點。出發前請確認當日場次是否照常舉行。</p>
+          <div class="info">
+            <span class="addr">金門縣金城鎮浯江街 53 號</span>
+            <a class="tel" href="tel:+886-82-371717">082-371717</a>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=清金門鎮總兵署" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -407,6 +450,10 @@
           <h3>🍽️ 金城市區晚餐</h3>
           <p class="desc">於金城市區輕鬆覓食。此時段多數素食店已打烊，蛋奶素建議選<b>俊輝碳烤</b>（17:00–01:00，戰地蛋餅、自助燒烤可挑蔬食），或提早於 18:50 前用餐。</p>
           <p class="note warn">素食備案：天恩素食（僅早餐）、可可亞蔬食（至 19:30）、臨海芋蔬坊（需預約）。</p>
+          <div class="info">
+            <span class="addr">俊輝碳烤：金門縣金城鎮民權路 98 號</span>
+            <a class="tel" href="tel:+886-82-323535">082-323535</a>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=俊輝碳烤+金城+金門" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到俊輝碳烤</a>
         </div>
@@ -442,6 +489,10 @@
           <h3>🌉 金門大橋</h3>
           <p class="desc">跨海景觀大橋，可於橋頭觀景區拍照眺望海景。</p>
           <p class="note rain">☔ 雨天可縮短為車上拍照，不必下車。</p>
+          <div class="info">
+            <span class="addr">連接金寧鄉慈湖路二段 ↔ 烈嶼鄉湖埔路</span>
+            <span class="note">跨海大橋無門牌，導航認明「金門大橋」</span>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=金門大橋" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -452,6 +503,10 @@
           <div class="row"><span class="chip">08:25–09:10</span><span class="cat sight">戰地坑道</span></div>
           <h3>● 九宮坑道</h3>
           <p class="desc">小金門戰地坑道，走九宮碼頭端進出，室內不受天候影響。</p>
+          <div class="info">
+            <span class="addr">金門縣烈嶼鄉羅厝 5 之 5 號</span>
+            <a class="tel" href="tel:+886-82-364405">082-364405</a>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=九宮坑道+烈嶼" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -462,6 +517,10 @@
           <div class="row"><span class="chip">09:20–10:05</span><span class="cat sight">室內展館</span></div>
           <h3>● 湖井頭戰史館</h3>
           <p class="desc">室內展館，可避熱降低體力消耗，眺望對岸前線。</p>
+          <div class="info">
+            <span class="addr">金門縣烈嶼鄉西路 60 號</span>
+            <a class="tel" href="tel:+886-82-362500">082-362500</a>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=湖井頭戰史館" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -473,6 +532,10 @@
           <h3>🥘 金芋閣</h3>
           <p class="desc">芋頭料理，取代週三休息的三層樓芋頭餐館。官方觀光網收錄，蛋奶素請店家確認無肉。備案：大明餐廳（東林地區）。</p>
           <p class="note warn">建議出發前電話再確認營業狀態。</p>
+          <div class="info">
+            <span class="addr">金門縣烈嶼鄉東林街 148 號</span>
+            <a class="tel" href="tel:+886-82-362738">082-362738</a>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=金芋閣+烈嶼" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -484,6 +547,11 @@
           <h3>🏘️ 西方老街 + 嘉年華冰菓室</h3>
           <p class="desc">西方老街保留老聚落與戰地標語氛圍，適合散步拍照。嘉年華冰菓室提供特色冰品與飲料（每日 11:00–18:00），蛋奶素友善。</p>
           <p class="note rain">☔ 雨天可縮短為 15–20 分鐘，快速走過拍照即可。</p>
+          <div class="info">
+            <span class="addr">嘉年華冰菓室：金門縣烈嶼鄉西口村西方 29 號</span>
+            <a class="tel" href="tel:+886-82-363126">082-363126</a>
+            <span class="note">門牌 19／29 號版本不一，訂位前建議再確認</span>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=嘉年華冰菓室+烈嶼" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -495,6 +563,10 @@
           <h3>🛡️ 沙溪堡</h3>
           <p class="desc">海岸戰地遺跡，以看海木棧道與夕陽為主。</p>
           <p class="note rain">☔ 天候不佳可直接跳過或路過快拍，不用特別停留。</p>
+          <div class="info">
+            <span class="addr">金門縣烈嶼鄉青岐村（濱海大道旁）</span>
+            <span class="note">海岸戰地遺跡，無專線；導航搜「沙溪堡」</span>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=沙溪堡+烈嶼" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -505,6 +577,10 @@
           <div class="row"><span class="chip">14:15–15:15</span><span class="cat sight">傳統街區</span></div>
           <h3>🧱 沙美老街（沙美摩洛哥）</h3>
           <p class="desc">金沙傳統街區，頹屋造景與特色小吃聚集地。時間較寬裕可在此多逛、休息，作為砲操前的緩衝。</p>
+          <div class="info">
+            <span class="addr">金門縣金沙鎮信義路、博愛街一帶</span>
+            <span class="note">老街聚落無統一電話；可停沙美車站步行約 300 公尺</span>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=沙美老街+金沙" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -516,6 +592,10 @@
           <h3>🥮 閩式燒餅</h3>
           <p class="desc">招牌起酥燒餅包麥芽糖。當作沙美老街的順路採買，蛋奶素請選甜燒餅，避開含肉鹹燒餅。</p>
           <p class="note warn">⚠️ 營業時間資料有 07:00–14:00 與 07:00–16:00 兩版本；若已打烊改隔天或電話確認，不硬等。</p>
+          <div class="info">
+            <span class="addr">金門縣金沙鎮博愛街 48 號</span>
+            <a class="tel" href="tel:+886-82-352922">082-352922</a>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=閩式燒餅+沙美" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -527,6 +607,10 @@
           <h3>獅山砲陣地 ｜ 砲操表演</h3>
           <p class="desc">15:45–16:00 抵達先走震東坑道、看砲堡陳列（約 30 分）→ 16:15 卡位 → 16:30 實彈砲操表演。靜態參觀約 40–60 分鐘即足夠，以官方當日公告場次為準。</p>
           <p class="note rain">☔ 表演在坑道內，不受天候影響。</p>
+          <div class="info">
+            <span class="addr">金門縣金沙鎮陽沙路 376 號</span>
+            <a class="tel" href="tel:+886-82-355697">082-355697</a>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=獅山砲陣地" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -537,6 +621,11 @@
           <div class="row"><span class="chip">18:00–19:00</span><span class="cat food">彈性晚餐</span></div>
           <h3>🍽️ 金城市區晚餐</h3>
           <p class="desc">回金城放鬆，不為晚餐長距離移動。若想吃合菜，<b>紫微庭園美食</b>（金寧，葷素同行皆可）為優質備選。</p>
+          <div class="info">
+            <span class="addr">紫微庭園美食：金門縣金寧鄉后盤山 35 號</span>
+            <a class="tel" href="tel:+886-930-081428">0930-081428</a>
+            <span class="note">週三公休</span>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=紫微庭園美食+金寧" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到紫微庭園</a>
         </div>
@@ -577,6 +666,10 @@
           <h3>🏮 山后民俗文化村</h3>
           <p class="desc">完整閩南二落大厝聚落建築群，08:00 出發車程約 20–25 分。建議留足約 90 分鐘慢逛，先逛完聚落再吃王阿婆當點心。</p>
           <p class="note rain">☔ 雨天可縮短為 50–60 分鐘，走主要巷弄拍代表建築即可。</p>
+          <div class="info">
+            <span class="addr">金門縣金沙鎮山后村 64-1 號</span>
+            <a class="tel" href="tel:+886-82-355347">082-355347</a>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=山后民俗文化村" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -587,6 +680,10 @@
           <div class="row"><span class="chip">10:00–10:25</span><span class="cat food">早點心</span></div>
           <h3>🥟 王阿婆小吃店</h3>
           <p class="desc">位於山后村內，以海蚵煎、海蚵麵線為主（非素食）。官方 08:30–17:00，僅作點心避免影響午餐。</p>
+          <div class="info">
+            <span class="addr">金門縣金沙鎮三山里山后 64 號</span>
+            <a class="tel" href="tel:+886-82-352388">082-352388</a>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=王阿婆小吃店+山后" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -598,6 +695,10 @@
           <h3>🥠 金許園（山外創始店）</h3>
           <p class="desc">北方麵點、蔥油餅、韭菜盒、牛肉餡餅。地址：金湖鎮市港 6 路武德新莊 158 號。官方 05:00–14:00 無公休。</p>
           <p class="note warn">金門另有其他分店，導航務必指定「山外創始店」。</p>
+          <div class="info">
+            <span class="addr">金門縣金湖鎮市港 6 路武德新莊 158 號</span>
+            <a class="tel" href="tel:+886-82-330201">082-330201</a>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=金許園山外創始店+金湖鎮市港六路" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -609,6 +710,10 @@
           <h3>🏛️ 陳景蘭洋樓</h3>
           <p class="desc">金門規模最大的僑鄉代表性洋樓建築，官方每日 08:30–17:30。</p>
           <p class="note rain">☔ 雨天建議快拍 15–20 分鐘，不用久留。</p>
+          <div class="info">
+            <span class="addr">金門縣金湖鎮正義里成功村 1 號</span>
+            <span class="note">免費開放古蹟，無專線（金湖鎮公所 082-332528）</span>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=陳景蘭洋樓" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -620,6 +725,11 @@
           <h3>🍶 經武酒窖</h3>
           <p class="desc">高粱酒地下窖藏展售與導覽，建議事先預約 14:00 場次；官方週四 13:30–17:00 開放。</p>
           <p class="note rain">☔ 室內導覽，不受天候影響，可多留時間。</p>
+          <div class="info">
+            <span class="addr">金門縣金湖鎮經武路 200 號</span>
+            <a class="tel" href="tel:+886-82-325628">082-325628</a>
+            <span class="note">需電話預約 14:00 場次（金酒總機轉分機）</span>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=經武酒窖+金門" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -631,6 +741,10 @@
           <h3>🌳 八二三戰史館 + 榕園</h3>
           <p class="desc">室內戰史文物展 + 戶外老榕樹景觀，兼顧室內外平衡安排與歷史洗禮。</p>
           <p class="note rain">☔ 戰史館室內不受影響；榕園戶外部分可縮短。</p>
+          <div class="info">
+            <span class="addr">金門縣金湖鎮安民村 1-10 號（榕園緊鄰）</span>
+            <a class="tel" href="tel:+886-82-325640">082-325640</a>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=八二三戰史館+金門" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -642,6 +756,11 @@
           <h3>🍳 合泉（蛋狗、蛋香）</h3>
           <p class="desc">社區型人氣小店，官方週四 09:00–17:00（提早到訪，用餐後盡快離開）。</p>
           <p class="note warn">⚠️ 社區小店常「售罄即止」，若賣完或接近打烊就直接跳過，不硬等。</p>
+          <div class="info">
+            <span class="addr">金門縣金湖鎮小徑村 63 號</span>
+            <a class="tel" href="tel:+886-82-332908">082-332908</a>
+            <span class="note">週三公休；售罄即止</span>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=合泉+蛋狗+金門" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -652,6 +771,10 @@
           <div class="row"><span class="chip">18:00–18:45</span><span class="cat food">晚餐</span></div>
           <h3>🍜 喜相逢</h3>
           <p class="desc">刀削麵、燒餅。官方週四 11:10–14:00、16:30–18:50（請提早入座）。備案：俊輝碳烤（週二至週日 17:00–01:00）。</p>
+          <div class="info">
+            <span class="addr">金門縣金湖鎮復興路 5 號</span>
+            <a class="tel" href="tel:+886-82-333064">082-333064</a>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=喜相逢小吃店+金門" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -686,6 +809,10 @@
           <div class="row"><span class="chip">08:20–09:20</span><span class="cat sight">主題展館</span></div>
           <h3>● 古寧頭戰史館</h3>
           <p class="desc">古寧頭戰役主題展館，油畫與歷史文物重現，官方每日 08:30–17:00。</p>
+          <div class="info">
+            <span class="addr">金門縣金寧鄉北山村（伯玉路二段 460 號一帶）</span>
+            <a class="tel" href="tel:+886-82-313274">082-313274</a>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=古寧頭戰史館" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -697,6 +824,10 @@
           <h3>● 北山播音牆 / 北山洋樓</h3>
           <p class="desc">彈痕古厝等歷史現場，請注意安全合法停車、短停拍照感受震撼。</p>
           <p class="note rain">☔ 雨天可縮短為 15–20 分鐘快拍，彈痕牆淋雨別久留。</p>
+          <div class="info">
+            <span class="addr">金門縣金寧鄉北山村（北山斷崖）</span>
+            <span class="note">戶外景點，無專線；導航認明「北山播音牆」</span>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=北山播音牆+古寧頭" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -708,6 +839,10 @@
           <h3>🧱 瓊林村（瓊林聚落與風獅爺）</h3>
           <p class="desc">金門最大紅磚古厝聚落巷弄，造訪瓊林戰鬥坑道與風獅爺。車輛請停外圍，勿深入不易迴轉的窄巷。</p>
           <p class="note rain">☔ 雨天可縮短為 30 分鐘，走主要巷弄即可。</p>
+          <div class="info">
+            <span class="addr">金門縣金湖鎮瓊林村</span>
+            <span class="note">聚落地標無專線（瓊林戰鬥坑道 082-332164）</span>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=瓊林聚落+金門" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -719,6 +854,10 @@
           <h3>🍜 三言兩語鮮茶咖啡美食館</h3>
           <p class="desc">招牌戰地炒泡麵。官方週五 10:00–15:00。備案：喜相逢小吃店（週五 11:10–14:00）。</p>
           <p class="note warn">炒泡麵多含肉類配料，蛋奶素同行者建議事先詢問能否做素炒泡麵。</p>
+          <div class="info">
+            <span class="addr">金門縣金湖鎮復興路 116 號</span>
+            <a class="tel" href="tel:+886-82-333222">082-333222</a>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=三言兩語鮮茶咖啡美食館+金門" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到這裡</a>
         </div>
@@ -729,6 +868,10 @@
           <div class="row"><span class="chip">13:00–14:30 彈性</span><span class="cat stay">伴手禮 · 咖啡</span></div>
           <h3>🛍️ 伴手禮採買 / 咖啡廳彈性時段</h3>
           <p class="desc">還車前約 1.5–2 小時空檔，可自由選擇：採買伴手禮（貢糖、金合利 / 金永利鋼刀、金門高粱酒、閩式燒餅，機場免稅店也可補買）；或找一間順路咖啡廳放鬆收尾。往機場方向沿路皆可，不硬排固定點。</p>
+          <div class="info">
+            <span class="addr">金合利鋼刀（金寧觀光工廠）：金門縣金寧鄉伯玉路一段 236 號</span>
+            <a class="tel" href="tel:+886-82-323999">082-323999</a>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=金合利鋼刀+金門" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到金合利鋼刀</a>
         </div>
@@ -739,6 +882,10 @@
           <div class="row"><span class="chip">15:00 還車</span><span class="cat anchor">✈️ 硬性底線</span></div>
           <h3>金門尚義機場（賦歸）</h3>
           <p class="desc">15:00 還車 → 15:15–16:15 報到安檢候機 → 16:30 登機（以實際機票時間為準）。預留還車、加油與候機時間，14:30 前收尾往機場最保險。</p>
+          <div class="info">
+            <span class="addr">金門縣金湖鎮尚義機場（金門航空站）</span>
+            <a class="tel" href="tel:+886-82-322381">082-322381</a>
+          </div>
         </div>
         <a class="navbtn" href="https://www.google.com/maps/dir/?api=1&destination=金門尚義機場" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>導航到機場</a>
         </div>
@@ -808,7 +955,7 @@
   <!-- ===================== MORE FOOD ===================== -->
   <section class="sec" id="more">
     <div class="sec-h"><span class="bar"></span><h2>🗺️ 金門特色美食擴充清單</h2></div>
-    <p style="font-size:13.5px;color:var(--ink-soft);margin:-6px 0 16px">不影響原行程，適合臨時空檔、提前結束或想換口味時參考。</p>
+    <p style="font-size:15.5px;color:var(--ink-soft);margin:-6px 0 16px">不影響原行程，適合臨時空檔、提前結束或想換口味時參考。</p>
 
     <details>
       <summary>📍 金城地區</summary>
