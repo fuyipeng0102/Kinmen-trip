@@ -23,7 +23,7 @@
     --brick:#AB4526;
     --brick-soft:#C6613F;
     --gold:#B9862E;
-    --gold-soft:#F3E7C8;
+    --gold-soft:#F3E7C8;--wine:#93293C;
     --shadow:0 1px 2px rgba(45,40,25,.06),0 8px 24px rgba(45,40,25,.06);
     --radius:16px;
   }
@@ -41,7 +41,7 @@
       --brick:#E1855F;
       --brick-soft:#D9744E;
       --gold:#DCB05A;
-      --gold-soft:#3A331E;
+      --gold-soft:#3A331E;--wine:#E893A1;
       --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px rgba(0,0,0,.35);
     }
   }
@@ -58,7 +58,7 @@
     --brick:#E1855F;
     --brick-soft:#D9744E;
     --gold:#DCB05A;
-    --gold-soft:#3A331E;
+    --gold-soft:#3A331E;--wine:#E893A1;
     --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px rgba(0,0,0,.35);
   }
 
@@ -217,6 +217,19 @@
   .info .note{color:var(--ink-faint)}
   .info .note::before{content:"ℹ️";margin-right:7px}
 
+  .tip{color:var(--wine);font-weight:700}
+
+  details.backup{margin:0 0 16px;background:var(--card-2);border:1px dashed var(--line);
+    border-radius:12px;overflow:hidden}
+  details.backup summary{padding:13px 15px;font-family:"Noto Serif TC",serif;font-weight:700;
+    font-size:16px;color:var(--ink-soft);cursor:pointer;list-style:none;
+    display:flex;justify-content:space-between;align-items:center;gap:10px}
+  details.backup summary::-webkit-details-marker{display:none}
+  details.backup summary::after{content:"＋";color:var(--brick);font-weight:700}
+  details.backup[open] summary::after{content:"－"}
+  details.backup[open] summary{border-bottom:1px dashed var(--line)}
+  details.backup .card{border:none;box-shadow:none;background:transparent;border-radius:0}
+
   .navbtn{
     display:flex;align-items:center;justify-content:center;gap:8px;
     margin:14px 0 0;padding:15px;width:100%;
@@ -280,6 +293,35 @@
   footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);
     font-size:13.5px;color:var(--ink-faint);line-height:1.75}
 
+  .keepsake{
+    margin-top:44px;position:relative;overflow:hidden;
+    border-radius:var(--radius);box-shadow:var(--shadow);
+    background:
+      radial-gradient(120% 120% at 88% -10%, rgba(185,134,46,.24), transparent 55%),
+      linear-gradient(160deg,var(--olive-deep),var(--olive));
+    color:#F4F0E4;padding:28px 22px;
+  }
+  .keepsake::after{
+    content:"";position:absolute;right:-46px;bottom:-64px;width:200px;height:200px;
+    border-radius:50%;border:1.5px dashed rgba(244,240,228,.20);
+  }
+  .keepsake .eyebrow{position:relative;z-index:1;font-family:"Space Mono",monospace;
+    font-size:12px;letter-spacing:.26em;text-transform:uppercase;
+    color:rgba(244,240,228,.72);margin:0 0 12px}
+  .keepsake h2{position:relative;z-index:1;margin:0;font-family:"Noto Serif TC",serif;
+    font-weight:900;font-size:23px;line-height:1.3}
+  .keepsake p{position:relative;z-index:1;margin:13px 0 0;font-size:15.5px;
+    color:rgba(244,240,228,.9);line-height:1.8}
+  .keepsake .coord{position:relative;z-index:1;margin:18px 0 0;
+    font-family:"Space Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.02em;
+    background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);
+    border-radius:10px;padding:11px 14px;display:inline-block}
+  .keepsake .mapbtn{position:relative;z-index:1;display:inline-flex;align-items:center;gap:8px;
+    margin:18px 0 0;padding:14px 20px;border-radius:12px;
+    background:var(--gold);color:#241c07;text-decoration:none;font-weight:700;font-size:16px}
+  .keepsake .mapbtn svg{width:17px;height:17px}
+  .keepsake .mapbtn:active{filter:brightness(.93)}
+
   a:focus-visible,summary:focus-visible{outline:2.5px solid var(--brick);outline-offset:2px;border-radius:6px}
 </style>
 </head>
@@ -323,10 +365,10 @@
       <div class="day-num"><small>DAY</small><b>01</b></div>
       <div class="day-title">
         <div class="date">10/13 (二)</div>
-        <h2>金城古城 · 水頭聚落 · 翟山坑道 · 慈湖夕陽 · 總兵署</h2>
+        <h2>金城古城 · 水頭聚落 · 擎天廳 · 慈湖夕陽 · 總兵署</h2>
       </div>
     </div>
-    <p class="day-intro">抵達日以金門西南側為主，下午進入「僑鄉洋樓 + 戰地坑道」，晚上以總兵署夜間導覽收尾。</p>
+    <p class="day-intro">抵達日以金門西南側為主。今日新增 <b class="tip">14:00 擎天廳梯次（已預約）</b> 為硬性時間錨點：上午壓縮西側行程，午後往太武山參觀擎天廳，結束後回西側吃蚵嗲、入住、看慈湖夕陽，晚上以總兵署夜導收尾。</p>
 
     <div class="timeline">
 
@@ -334,7 +376,7 @@
         <div class="card"><div class="card-body">
           <div class="row"><span class="chip">11:00 取車</span><span class="cat">交通</span></div>
           <h3>✈️ 金門尚義機場 / 租車</h3>
-          <p class="desc">辦理租車手續、檢查車況與油量，建議預留 20–30 分鐘再出發。</p>
+          <p class="desc">辦理租車手續、檢查車況與油量，<b class="tip">建議預留 20–30 分鐘</b>再出發。</p>
           <div class="info">
             <span class="addr">金門縣金湖鎮尚義機場（金門航空站）</span>
             <a class="tel" href="tel:+886-82-322381">082-322381</a>
@@ -358,25 +400,26 @@
         </div>
       </div>
 
-      <div class="stop">
-        <div class="card"><div class="card-body">
-          <div class="row"><span class="chip">12:15–13:15</span><span class="cat sight">戰地坑道</span></div>
-          <h3>● 翟山坑道</h3>
-          <p class="desc">戰地地下坑道，可行船水道，內部潮濕涼爽適合避暑。建議穿防滑鞋，飯後散步剛好助消化。</p>
-          <div class="info">
-            <span class="addr">金門縣金城鎮翟山（古崗湖東南方）</span>
-            <a class="tel" href="tel:+886-82-313241">082-313241</a>
+      <details class="backup">
+        <summary>🔧 機動備選 · 翟山坑道（時間足夠再走）</summary>
+        <div class="card">
+          <div class="card-body">
+            <div class="row"><span class="cat sight">戰地坑道</span></div>
+            <p class="desc">戰地地下坑道，可行船水道，內部潮濕涼爽適合避暑，建議穿防滑鞋。因今日午後排入 <b class="tip">14:00 擎天廳</b>，上午時間偏緊：午餐後仍有餘裕就順走（翟山與水頭同在金城西南、相距很近），否則直接前往水頭、擇日再訪。</p>
+            <div class="info">
+              <span class="addr">金門縣金城鎮翟山（古崗湖東南方）</span>
+              <a class="tel" href="tel:+886-82-313241">082-313241</a>
+            </div>
           </div>
+          <a class="navbtn" href="https://www.google.com/maps/search/?api=1&query=翟山坑道" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>在 Google 地圖開啟</a>
         </div>
-        <a class="navbtn" href="https://www.google.com/maps/search/?api=1&query=翟山坑道" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>在 Google 地圖開啟</a>
-        </div>
-      </div>
+      </details>
 
       <div class="stop">
         <div class="card"><div class="card-body">
-          <div class="row"><span class="chip">13:30–15:15</span><span class="cat sight">閩南聚落 · 洋樓</span></div>
+          <div class="row"><span class="chip">12:10–13:10</span><span class="cat sight">閩南聚落 · 洋樓</span></div>
           <h3>● 水頭聚落 + 得月樓</h3>
-          <p class="desc">僑鄉閩南建築 + 洋樓群，得月樓整修完成重新開放，適合慢拍慢逛，建議留足時間。</p>
+          <p class="desc">僑鄉閩南建築 + 洋樓群，得月樓整修完成重新開放。因午後要趕 14:00 擎天廳，今日壓縮為約 1 小時，以得月樓為重點；逛完直接開車往太武山。</p>
           <p class="note rain">☔ 雨天可縮短為 40–50 分鐘，走主要動線拍得月樓外觀即可。</p>
           <div class="info">
             <span class="addr">金門縣金城鎮前水頭 45 號（得月樓）</span>
@@ -387,11 +430,26 @@
         </div>
       </div>
 
+      <div class="stop anchor">
+        <div class="card"><div class="card-body">
+          <div class="row"><span class="chip">14:00 梯次</span><span class="cat anchor">💥 時間錨點 · 已預約</span></div>
+          <h3>擎天廳（太武山）</h3>
+          <p class="desc">花崗岩中開鑿的巨型地下廳堂，戰地工程代表作。已預約 14:00 梯次，<b class="tip">建議 13:40 前抵達集合點</b>；導覽約 45–60 分鐘，結束後回西側續行程。</p>
+          <p class="note warn">⚠️ 需事先申請、憑核准資格進入，務必攜帶身分證件；集合點在太武山玉章路一帶，先查好停車與集合位置，勿遲到。</p>
+          <div class="info">
+            <span class="addr">金門縣金湖鎮太武山（玉章路）</span>
+            <span class="note">採預約梯次制，以核准梯次時間為準</span>
+          </div>
+        </div>
+        <a class="navbtn" href="https://www.google.com/maps/search/?api=1&query=擎天廳+金門太武山" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>在 Google 地圖開啟</a>
+        </div>
+      </div>
+
       <div class="stop food">
         <div class="card"><div class="card-body">
           <div class="row"><span class="chip">15:30–16:15</span><span class="cat food">下午茶 · 必吃Top5</span></div>
           <h3>🥟 蚵嗲之家</h3>
-          <p class="desc">40 年老店，石蚵蚵嗲、芝麻球。官方約 14:30–19:00（建議不晚於 18:30）。蛋奶素同行者可單吃現炸芝麻球（蚵嗲非素）。</p>
+          <p class="desc">40 年老店，石蚵蚵嗲、芝麻球。官方約 14:30–19:00（<b class="tip">建議不晚於 18:30</b>）。蛋奶素同行者可單吃現炸芝麻球（蚵嗲非素）。</p>
           <div class="info">
             <span class="addr">金門縣金城鎮莒光路一段 59 號</span>
             <a class="tel" href="tel:+886-82-322210">082-322210</a>
@@ -448,7 +506,7 @@
         <div class="card"><div class="card-body">
           <div class="row"><span class="chip">20:30–21:30</span><span class="cat food">彈性晚餐</span></div>
           <h3>🍽️ 金城市區晚餐</h3>
-          <p class="desc">於金城市區輕鬆覓食。此時段多數素食店已打烊，蛋奶素建議選<b>俊輝碳烤</b>（17:00–01:00，戰地蛋餅、自助燒烤可挑蔬食），或提早於 18:50 前用餐。</p>
+          <p class="desc">於金城市區輕鬆覓食。此時段多數素食店已打烊，蛋奶素建議選<b>俊輝碳烤</b>（17:00–01:00，戰地蛋餅、自助燒烤可挑蔬食），或<b class="tip">提早於 18:50 前用餐</b>。</p>
           <p class="note warn">素食備案：天恩素食（僅早餐）、可可亞蔬食（至 19:30）、臨海芋蔬坊（需預約）。</p>
           <div class="info">
             <span class="addr">俊輝碳烤：金門縣金城鎮民權路 98 號</span>
@@ -605,7 +663,7 @@
         <div class="card"><div class="card-body">
           <div class="row"><span class="chip">16:30 砲操</span><span class="cat anchor">💥 時間錨點</span></div>
           <h3>獅山砲陣地 ｜ 砲操表演</h3>
-          <p class="desc">15:45–16:00 抵達先走震東坑道、看砲堡陳列（約 30 分）→ 16:15 卡位 → 16:30 實彈砲操表演。靜態參觀約 40–60 分鐘即足夠，以官方當日公告場次為準。</p>
+          <p class="desc"><b class="tip">15:45–16:00 抵達</b>先走震東坑道、看砲堡陳列（約 30 分）→ <b class="tip">16:15 卡位</b> → 16:30 實彈砲操表演。靜態參觀約 40–60 分鐘即足夠，以官方當日公告場次為準。</p>
           <p class="note rain">☔ 表演在坑道內，不受天候影響。</p>
           <div class="info">
             <span class="addr">金門縣金沙鎮陽沙路 376 號</span>
@@ -723,7 +781,7 @@
         <div class="card"><div class="card-body">
           <div class="row"><span class="chip">14:00–15:00</span><span class="cat sight">高粱酒 · 建議預約</span></div>
           <h3>🍶 經武酒窖</h3>
-          <p class="desc">高粱酒地下窖藏展售與導覽，建議事先預約 14:00 場次；官方週四 13:30–17:00 開放。</p>
+          <p class="desc">高粱酒地下窖藏展售與導覽，<b class="tip">建議事先預約 14:00 場次</b>；官方週四 13:30–17:00 開放。</p>
           <p class="note rain">☔ 室內導覽，不受天候影響，可多留時間。</p>
           <div class="info">
             <span class="addr">金門縣金湖鎮經武路 200 號</span>
@@ -754,7 +812,7 @@
         <div class="card"><div class="card-body">
           <div class="row"><span class="chip">16:15–16:45</span><span class="cat food">下午茶 · 蛋奶素可吃</span></div>
           <h3>🍳 合泉（蛋狗、蛋香）</h3>
-          <p class="desc">社區型人氣小店，官方週四 09:00–17:00（提早到訪，用餐後盡快離開）。</p>
+          <p class="desc">社區型人氣小店，官方週四 09:00–17:00（<b class="tip">提早到訪</b>，用餐後盡快離開）。</p>
           <p class="note warn">⚠️ 社區小店常「售罄即止」，若賣完或接近打烊就直接跳過，不硬等。</p>
           <div class="info">
             <span class="addr">金門縣金湖鎮小徑村 63 號</span>
@@ -770,7 +828,7 @@
         <div class="card"><div class="card-body">
           <div class="row"><span class="chip">18:00–18:45</span><span class="cat food">晚餐</span></div>
           <h3>🍜 喜相逢</h3>
-          <p class="desc">刀削麵、燒餅。官方週四 11:10–14:00、16:30–18:50（請提早入座）。備案：俊輝碳烤（週二至週日 17:00–01:00）。</p>
+          <p class="desc">刀削麵、燒餅。官方週四 11:10–14:00、16:30–18:50（<b class="tip">請提早入座</b>）。備案：俊輝碳烤（週二至週日 17:00–01:00）。</p>
           <div class="info">
             <span class="addr">金門縣金湖鎮復興路 5 號</span>
             <a class="tel" href="tel:+886-82-333064">082-333064</a>
@@ -800,7 +858,7 @@
         <h2>古寧頭戰史館 · 北山彈痕古厝 · 瓊林聚落 · 機場賦歸</h2>
       </div>
     </div>
-    <p class="day-intro">戰爭記憶 + 傳統村落收尾，下午 <b>15:00 前抵達機場為硬性底線！</b></p>
+    <p class="day-intro">戰爭記憶 + 傳統村落收尾，下午 <b class="tip">15:00 前抵達機場為硬性底線！</b></p>
 
     <div class="timeline">
 
@@ -881,7 +939,7 @@
         <div class="card"><div class="card-body">
           <div class="row"><span class="chip">15:00 還車</span><span class="cat anchor">✈️ 硬性底線</span></div>
           <h3>金門尚義機場（賦歸）</h3>
-          <p class="desc">15:00 還車 → 15:15–16:15 報到安檢候機 → 16:30 登機（以實際機票時間為準）。預留還車、加油與候機時間，14:30 前收尾往機場最保險。</p>
+          <p class="desc">15:00 還車 → 15:15–16:15 報到安檢候機 → 16:30 登機（以實際機票時間為準）。預留還車、加油與候機時間，<b class="tip">14:30 前收尾往機場最保險</b>。</p>
           <div class="info">
             <span class="addr">金門縣金湖鎮尚義機場（金門航空站）</span>
             <a class="tel" href="tel:+886-82-322381">082-322381</a>
@@ -1019,6 +1077,16 @@
         <div class="fitem"><b>華南汽水</b><br><span>小金門復古風味在地汽水</span></div>
       </div>
     </details>
+  </section>
+
+  <section class="keepsake">
+    <p class="eyebrow">A Personal Marker · 舊地</p>
+    <h2>🎖️ 我待過一年的營區</h2>
+    <p>這個點不排進行程，只是想把它留在最後——曾經在這裡駐守整整一年的地方。這趟若剛好經過，遠遠望一眼也好。</p>
+    <div class="coord">24°24'46.3"N　118°19'13.7"E</div>
+    <div>
+      <a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=24.412861,118.320472" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>在 Google 地圖標示這個座標</a>
+    </div>
   </section>
 
   <footer>
